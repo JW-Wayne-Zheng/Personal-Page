@@ -1,0 +1,17 @@
+html {
+    height: 100vh;
+}
+
+body {
+    background: linear-gradient(black, gray, white);
+}
+
+#personalDescription {
+    display: flex;
+    justify-content: center;
+    background: white;
+    border-radius: 30em;
+    height: 100%;
+    align-content: center;
+    font: 15px Arial, sans-serif;
+}
