@@ -3,15 +3,61 @@ html {
 }
 
 body {
-    background: linear-gradient(black, gray, white);
+    background: white;
 }
 
-#personalDescription {
-    display: flex;
+#personal-description {
+    display: block;
     justify-content: center;
     background: white;
-    border-radius: 30em;
     height: 100%;
     align-content: center;
+    text-align: justify;
     font: 15px Arial, sans-serif;
+    position: relative;
+    width: 50%;
+    margin: auto;
+}
+
+#fixed-header {
+    background: linear-gradient(45deg, white, rgb(221, 214, 214));
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+#in-page-title {
+    font: 35px impact, sans-serif;
+    color: black;
+}
+
+#reference-links {
+    position: relative;
+    display: block;
+    width: 50%;
+    height: 50%;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin: auto;
+}
+
+.box-shadow {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+#github-tag {
+    height: 100px;
+    width: 100px;
+    display: block;
+    background-image: url("https://cdn.icon-icons.com/icons2/2368/PNG/512/github_logo_icon_143772.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    align-content: center;
+    justify-content: center;
+    margin: auto;
+}
+
+#linkedin-tag {
+
 }
