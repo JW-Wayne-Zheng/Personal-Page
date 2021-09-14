@@ -32,10 +32,11 @@ body {
 }
 
 #reference-links {
+    border-style: solid;
     position: relative;
-    display: block;
+    display: flex;
     width: 50%;
-    height: 50%;
+    height: 100px;
     justify-content: center;
     align-content: center;
     text-align: center;
@@ -47,17 +48,31 @@ body {
 }
 
 #github-tag {
-    height: 100px;
-    width: 100px;
-    display: block;
-    background-image: url("https://cdn.icon-icons.com/icons2/2368/PNG/512/github_logo_icon_143772.png");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
     align-content: center;
     justify-content: center;
     margin: auto;
 }
 
-#linkedin-tag {
+#github-image {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
 
+#linkedin-tag {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    align-content: center;
+    justify-content: center;
+    margin: auto;
+}
+
+#linkedin-image {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
 }
