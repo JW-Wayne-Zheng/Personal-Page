@@ -1,5 +1,5 @@
 html {
-    height: 100vh;
+    height: 100%;
 }
 
 body {
@@ -10,12 +10,12 @@ body {
     display: block;
     justify-content: center;
     background: white;
-    height: 100%;
+    height: 10%;
     align-content: center;
-    text-align: justify;
+    text-align: center;
     font: 15px Arial, sans-serif;
     position: relative;
-    width: 50%;
+    width: 90%;
     margin: auto;
 }
 
@@ -35,8 +35,8 @@ body {
     border-style: solid;
     position: relative;
     display: flex;
-    width: 50%;
-    height: 100px;
+    width: 90%;
+    height: 20%;
     justify-content: center;
     align-content: center;
     text-align: center;
@@ -48,7 +48,7 @@ body {
 }
 
 #github-tag {
-    width: 200px;
+    width: 35%;
     height: 200px;
     display: inline-block;
     align-content: center;
@@ -67,7 +67,7 @@ body {
 }
 
 #linkedin-tag {
-    width: 200px;
+    width: 35%;
     height: 200px;
     display: inline-block;
     align-content: center;
