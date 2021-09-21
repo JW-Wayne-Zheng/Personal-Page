@@ -1,4 +1,5 @@
 # Personal-Website
+I am still working on it, the page will get updated from time to time.
 ## Description
 This is my personal porfolio page which includes basic information about myself, some of the projects that I have worked on in the past, and my resume, also some reference links to my GitHub and Linkedin.
 ## Live Demo
