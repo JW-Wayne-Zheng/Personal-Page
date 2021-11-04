@@ -99,7 +99,7 @@
                         <a href="#resume" class="nav-link"><span data-hover="Resume">Resume</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="#contact" class="nav-link"><span data-hover="Contact">Contact</span></a>
+                        <a class="nav-link"><span data-hover="Contact" onclick="ShowAndHideContactBar()">Contact</span></a>
                     </li>
                 </ul>
 
@@ -136,7 +136,7 @@
                         
                         <div class="custom-btn-group mt-4">
                           <a href="#resume" class="btn mr-lg-2 custom-btn"><i class='uil uil-file-alt'></i>Resume</a>
-                          <a href="#contact" class="btn custom-btn custom-btn-bg custom-btn-link" onclick="ShowAndHideContactBar()">Contact Info</a>
+                          <a class="btn custom-btn custom-btn-bg custom-btn-link" onclick="ShowAndHideContactBar()">Contact Info</a>
                         </div>
                     </div>
                 </div>
@@ -337,9 +337,9 @@
           </div> -->
           <div id="icon-bar" class="icon-bar">
             <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
-            <a href="#" class="github"><i class="fa fa-github"></i></a> 
+            <a href="https://github.com/WayneJWZLemon" class="github" target="blank"><i class="fa fa-github"></i></a> 
             <a href="#" class="google"><i class="fa fa-google"></i></a> 
-            <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/j-wayne-zheng" class="linkedin" target="blank"><i class="fa fa-linkedin"></i></a>
             <a href="#" class="youtube"><i class="fa fa-youtube"></i></a> 
           </div>
 
@@ -374,10 +374,10 @@
     <script>
       function ShowAndHideContactBar() {
         var x = document.getElementById("icon-bar");
-        if (x.style.display === "none") {
-          x.style.display = "block";
-        } else {
+        if (x.style.display === "block") {
           x.style.display = "none";
+        } else {
+          x.style.display = "block";
         }
       }
       </script>
