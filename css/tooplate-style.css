@@ -11,7 +11,7 @@ https://www.tooplate.com/view/2115-marvel
 body {
   font-family: "Maven Pro", sans-serif;
   padding-top: 70px;
-  background: lightblue;
+  background: rgb(251, 254, 255);
 }
 
 .full-screen {
@@ -52,7 +52,7 @@ p {
   font-size: 18px;
   font-weight: 300;
   line-height: 1.5;
-  color: #5b5b5b;
+  color: #3b3a3a;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -96,7 +96,7 @@ b, strong {
   color: #ffc200;
 }
 .custom-btn.custom-btn-bg {
-  background: #474559;
+  background: #fae1da;
   color: #ffffff;
 }
 .custom-btn.custom-btn-bg:hover {
@@ -112,12 +112,12 @@ b, strong {
   display: inline-block;
   vertical-align: top;
   margin-top: 5px;
-  min-width: 260px;
+  min-width: 400px;
   position: relative;
 }
 
 .animated-item {
-  color: #ffc200;
+  color: #0e258a;
 }
 
 .animated-item {
@@ -193,6 +193,7 @@ b, strong {
 }
 
 .navbar-expand-sm .navbar-nav .nav-link {
+  color: #05244d;
   padding: 0 20px;
 }
 
@@ -294,7 +295,7 @@ b, strong {
   background: #0c0c0d;
 }
 .dark-mode .navbar-light .navbar-nav .nav-link {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(176, 228, 248, 0.8);
 }
 .dark-mode .navbar-light .navbar-nav .nav-link:hover {
   color: #ffc200;
@@ -309,7 +310,7 @@ b, strong {
 }
 .dark-mode .feature-card .uil,
 .dark-mode .navbar-light .navbar-brand,
-.dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6,
+.dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6, .dark-mode p,
 .dark-mode .color-mode {
   color: #ffffff;
 }
@@ -519,7 +520,7 @@ b, strong {
 }
 @media (max-width: 580px) {
 	.animated-info {
-		min-width: 200px;
+		min-width: 300px;
 	}
   .animated-item {
     font-size: 30px;
