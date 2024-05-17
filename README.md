@@ -1,7 +1,14 @@
-# Personal-Website
-I am still working on it, the page will get updated from time to time.
-## Description
-This is my personal porfolio page which includes basic information about myself, some of the projects that I have worked on in the past, and my resume, also some reference links to my GitHub and Linkedin.
-## Live Demo
-This is the link to see my site in live: Https://jwaynez.com <br/>
-Thanks to Github Page for hosting my webpage!
+# 👋 Welcome to My Portfolio Page
+
+Hello! I'm Jianwei Zheng (Preferred name: Wayne, Chinese characters: 郑建威). I am a passionate software developer with a keen interest in web development, machine learning, and anything intriguing. This GitHub repository serves as a showcase of my projects, experiments, and contributions to the coding community. Here, you'll find a diverse collection of code that reflects my journey in the tech world.
+
+This is my personal portfolio page, which includes basic information about myself, some of the projects I have worked on in the past, my resume, and reference links to my GitHub and LinkedIn profiles.
+
+## 📝 Get in Touch
+
+I'm always open to collaboration, feedback, and connecting with fellow developers. Feel free to reach out to me through my listed email or LinkedIn.
+
+## 🌐 Connect with Me
+
+- [LinkedIn](https://www.linkedin.com/in/j-wayne-zheng)
+- 📧 Email: [zhengwayne911@gmail.com](mailto:zhengwayne911@gmail.com)
