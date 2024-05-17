@@ -2,19 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="Personal Page for Wayne Zheng" />
-    <meta name="author" content="Wayne Zheng" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta
       name="image"
       property="og:image"
-      content="https://thumbs.dreamstime.com/b/software-language-programmer-avatar-software-language-programmer-avatar-vector-illustration-design-110589781.jpg"
+      content="https://backiee.com/static/wallpapers/1920x1080/386745.jpg"
     />
-
-    <title>Wayne Zheng Personal Porfolio Site</title>
+    <meta
+      content="Wayne Zheng's portfolio page showcasing web development and machine learning projects, resume, and contact information."
+      name="description"
+    />
+    <meta
+      content="Jianwei Zheng, Wayne Zheng, web development, machine learning, software developer, portfolio, GitHub, LinkedIn, coding projects, resume, contact"
+      name="keywords"
+    />
+    <title>Wayne Zheng Page</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
@@ -31,577 +33,445 @@
       gtag("config", "G-5H200VSVG0");
     </script>
 
-    <link rel="icon" type="image/png" href="images/PersonalLogoBgRemoved.png" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/unicons.css" />
-    <link rel="stylesheet" href="css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/favicon.png" rel="apple-touch-icon" />
+
+    <!-- Google Fonts -->
     <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
 
-    <!-- MAIN STYLE -->
-    <link rel="stylesheet" href="css/tooplate-style.css" />
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
-    <style>
-      body {
-        margin: 0;
-        height: 2000px;
-      }
-
-      #icon-bar {
-        display: none;
-        position: fixed;
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-      }
-
-      .icon-bar a {
-        display: block;
-        text-align: center;
-        padding: 16px;
-        transition: all 0.3s ease;
-        color: white;
-        font-size: 20px;
-      }
-
-      .icon-bar a:hover {
-        background-color: #000;
-      }
-
-      .github {
-        background: #55acee;
-        color: white;
-      }
-
-      .linkedin {
-        background: #007bb5;
-        color: white;
-      }
-
-      .content {
-        margin-left: 75px;
-        font-size: 30px;
-      }
-    </style>
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet" />
   </head>
+
   <body>
-    <!-- MENU -->
-    <nav class="navbar navbar-expand-sm navbar-light">
-      <div class="container">
-        <a class="navbar-brand" href="index.html"
-          ><i class="uil uil-user"></i> Wayne</a
-        >
-
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-          <span class="navbar-toggler-icon"></span>
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item">
-              <a href="#about" class="nav-link"
-                ><span data-hover="About">About</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a href="#project" class="nav-link"
-                ><span data-hover="Projects">Projects</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a href="#resume" class="nav-link"
-                ><span data-hover="Resume">Resume</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link"
-                ><span data-hover="Contact" onclick="ShowAndHideContactBar()"
-                  >Contact</span
-                ></a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <!-- ABOUT -->
-    <section
-      class="about full-screen d-lg-flex justify-content-center align-items-center"
-      id="about"
-    >
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
-            <div class="about-text">
-              <small class="small-text"
-                >Welcome to <span class="mobile-block">my page</span></small
-              >
-              <h1 class="animated animated-text">
-                <span class="mr-2">Hey everyone, I'm</span>
-                <div class="animated-info">
-                  <span class="animated-item">Wayne Zheng.</span>
-                  <span class="animated-item">a explorer.</span>
-                  <span class="animated-item">a programmer.</span>
-                </div>
-              </h1>
-
-              <p>
-                I'm a passionate software developer with a relentless curiosity
-                for emerging technologies and a strong commitment to translating
-                my coding skills into practical, real-world projects during my
-                spare hours. I thrive on continuous learning and constantly seek
-                out new tech stacks to expand my expertise, creating innovative
-                solutions and pushing the boundaries of what's possible in the
-                world of software development.
-                <br />
-                Palo Alto, CA
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-5 col-md-12 col-12">
-            <div class="about-image svg">
-              <img
-                src="images/undraw_software_engineer_lv15.svg"
-                class="img-fluid"
-                alt="svg image"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section class="justify-content-center align-items-center" id="skills">
-      <h2 class="text-center mt-0 mb-3 pt-0">Skills</h2>
-      <div class="container d-lg-none">
-        <ul class="list-group w-75 mx-auto">
-          <li class="list-group-item">Python</li>
-          <li class="list-group-item">Java</li>
-          <li class="list-group-item">C#</li>
-          <li class="list-group-item">JavaScript</li>
-          <li class="list-group-item">C</li>
-          <li class="list-group-item">Android</li>
-          <li class="list-group-item">AWS</li>
-          <li class="list-group-item">Unity</li>
+    <!-- ======= Mobile nav toggle button ======= -->
+    <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
+    <i class="bi bi-list mobile-nav-toggle d-lg-none"></i>
+    <!-- ======= Header ======= -->
+    <header id="header" class="d-flex flex-column justify-content-center">
+      <nav id="navbar" class="navbar nav-menu">
+        <ul>
+          <li>
+            <a href="#hero" class="nav-link scrollto active"
+              ><i class="bx bx-home"></i> <span>Home</span></a
+            >
+          </li>
+          <li>
+            <a href="#about" class="nav-link scrollto"
+              ><i class="bx bx-user"></i> <span>About</span></a
+            >
+          </li>
+          <li>
+            <a href="#resume" class="nav-link scrollto"
+              ><i class="bx bx-file-blank"></i> <span>Resume</span></a
+            >
+          </li>
+          <li>
+            <a href="#portfolio" class="nav-link scrollto"
+              ><i class="bx bx-book-content"></i> <span>Portfolio</span></a
+            >
+          </li>
         </ul>
-      </div>
-      <div class="container d-none d-lg-block">
-        <div class="card-group w-50 mx-auto">
-          <div class="card">
-            <img
-              class="card-img-top"
-              src="images/icons/python-svgrepo-com.svg"
-              alt="Python Svg Icon"
-            />
-          </div>
-          <div class="card">
-            <img
-              class="card-img-top"
-              src="images/icons/java-svgrepo-com.svg"
-              alt="Java Svg Icon"
-            />
-          </div>
-          <div class="card">
-            <img
-              class="card-img-top"
-              src="images/icons/c-sharp-svgrepo-com.svg"
-              alt="C# Svg Icon"
-            />
-          </div>
-          <div class="card">
-            <img
-              class="card-img-top"
-              src="images/icons/javascript-svgrepo-com.svg"
-              alt="JavaScript Svg Icon"
-            />
-          </div>
-        </div>
-        <div class="card-group w-50 mx-auto">
-          <div class="card">
-            <img
-              class="card-img-top"
-              src="images/icons/c-svgrepo-com.svg"
-              alt="C Svg Icon"
-            />
-          </div>
-          <div class="card">
-            <img
-              class="card-img-top"
-              src="images/icons/android-svgrepo-com.svg"
-              alt="Android Svg Icon"
-            />
-          </div>
-          <div class="card">
-            <img
-              class="card-img-top"
-              src="images/icons/aws-svgrepo-com.svg"
-              alt="AWS Svg Icon"
-            />
-          </div>
-          <div class="card">
-            <img
-              class="card-img-top"
-              src="images/icons/unity-svgrepo-com.svg"
-              alt="Unity Svg Icon"
-            />
-          </div>
+      </nav>
+      <!-- .nav-menu -->
+    </header>
+    <!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex flex-column justify-content-center">
+      <div class="container" data-aos="zoom-in" data-aos-delay="100">
+        <h1>Wayne Zheng</h1>
+        <p>
+          I'm
+          <span
+            class="typed"
+            data-typed-items="Developer, Data Scientist"
+          ></span>
+        </p>
+        <div class="social-links">
+          <a
+            href="https://www.linkedin.com/in/j-wayne-zheng"
+            target="_blank"
+            class="linkedin"
+            ><i class="bx bxl-linkedin"></i
+          ></a>
+          <a
+            href="https://github.com/WayneJWZLemon"
+            target="_blank"
+            class="github"
+            ><i class="bx bxl-github"></i
+          ></a>
+          <a
+            href="https://twitter.com/jwwaynezheng"
+            target="_blank"
+            class="twitter"
+            ><i class="bx bxl-twitter"></i
+          ></a>
         </div>
       </div>
     </section>
+    <!-- End Hero -->
 
-    <!-- PROJECTS -->
-    <section class="project py-5" id="project">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-11 text-center mx-auto col-12">
-            <div class="col-lg-8 mx-auto">
-              <h2>Projects that I have worked on in the past</h2>
-              <h3>
-                For details about the specific project, please click on the
-                project image.
-              </h3>
-            </div>
+    <main id="main">
+      <!-- ======= About Section ======= -->
+      <section id="about" class="about">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>About</h2>
+            <p>
+              As a tech professional, I am fueled by a curious mindset, always
+              eager to explore emerging technologies and devise innovative
+              solutions. My fervor for coding and problem-solving is the driving
+              force behind my commitment to delivering top-notch, efficient
+              software and data-driven solutions. I approach each project with a
+              strong sense of responsibility, ensuring that my work not only
+              aligns with technical requirements but also contributes
+              significantly to the overall success, robustness, and reliability
+              of the systems I contribute to.
+            </p>
+          </div>
 
-            <div class="owl-carousel owl-theme">
-              <div class="item">
-                <div class="project-info">
-                  <a
-                    href="https://github.com/Capstone-Projects-2021-Fall/project-graffitit"
-                    target="blank"
-                  >
-                    <img
-                      src="images/project/project-image01.svg"
-                      class="img-fluid"
-                      alt="project image"
-                    />
-                  </a>
+          <div class="row">
+            <div class="col-lg-8 pt-4 pt-lg-0 content m-auto">
+              <h3>Software Developer &amp; Data Scientist</h3>
+              <p class="fst-italic">
+                As a Full Stack Software Engineer, I have experience in
+                implementing responsive frontend components and robust backend
+                services, complemented by a deep understanding of machine
+                learning principles. I thrive in collaborative environments,
+                tackling cutting-edge engineering challenges with enthusiasm.
+              </p>
+              <div class="row">
+                <div class="col-lg-6">
+                  <ul>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong>Location:</strong>
+                      <span> San Francisco Bay Area, USA </span>
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong>Degree:</strong>
+                      <span>B.S. Computer Science & Data Science</span>
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong>Freelance:</strong> <span>Available</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
-
-              <div class="item">
-                <div class="project-info">
-                  <a
-                    href="https://github.com/WayneJWZLemon/WebBrowserApp"
-                    target="blank"
-                  >
-                    <img
-                      src="images/project/project-image02.png"
-                      class="img-fluid"
-                      alt="project image"
-                    />
-                  </a>
+              <h3>Technology Stack</h3>
+              <div class="row">
+                <div class="col-lg-6">
+                  <ul>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      JavaScript
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      Python
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      Java
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      C#
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      React
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      TensorFlow
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      SQL
+                    </li>
+                  </ul>
                 </div>
-              </div>
-
-              <div class="item">
-                <div class="project-info">
-                  <a href="https://paintingganapp.onrender.com/" target="blank">
-                    <img
-                      src="images/project/project-image03.svg"
-                      class="img-fluid"
-                      alt="project image"
-                    />
-                  </a>
+                <div class="col-lg-6">
+                  <ul>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      Django
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      Unity
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      Android Studio
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      AWS
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      GraphQL
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      Golang
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      Spring
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <!-- End About Section -->
 
-    <!-- FEATURES -->
-    <section
-      class="resume py-5 d-lg-flex justify-content-center align-items-center"
-      id="resume"
-    >
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 col-12">
-            <h2 class="mb-4 mobile-mt-2">Courses</h2>
-
-            <div class="timeline">
-              <div class="timeline-wrapper">
-                <div class="timeline-yr">
-                  <span>2022</span>
-                </div>
-                <div class="timeline-info">
-                  <h3>
-                    <span>Projects in Data Science</span
-                    ><small>Data Science</small>
-                  </h3>
-                  <p>
-                    <a
-                      href="https://github.com/WayneJWZLemon/CIS4496-GANs-Project"
-                      class="badge badge-primary"
-                      target="blank"
-                      >Link to the project</a
-                    >
-                  </p>
-                </div>
-              </div>
-
-              <div class="timeline-wrapper">
-                <div class="timeline-yr">
-                  <span>2021</span>
-                </div>
-                <div class="timeline-info">
-                  <h3>
-                    <span>Projects in Computer Science</span
-                    ><small>Computer Science Science</small>
-                  </h3>
-                  <p>
-                    <a
-                      href="https://github.com/Capstone-Projects-2021-Fall/project-graffitit"
-                      class="badge badge-info"
-                      target="blank"
-                      >Link to the project</a
-                    >
-                  </p>
-                </div>
-              </div>
-
-              <div class="timeline-wrapper">
-                <div class="timeline-yr">
-                  <span>2021</span>
-                </div>
-                <div class="timeline-info">
-                  <h3>
-                    <span>Software Design</span><small>Computer Science</small>
-                  </h3>
-                  <p>
-                    <a
-                      href="https://github.com/CIS-SoftwareDesign-S21/pro-04-project-16x16"
-                      class="badge badge-success"
-                      target="blank"
-                      >Link to the project</a
-                    >
-                  </p>
-                </div>
-              </div>
-
-              <div class="timeline-wrapper">
-                <div class="timeline-yr">
-                  <span>2021</span>
-                </div>
-                <div class="timeline-info">
-                  <h3>
-                    <span>Data-Intensive and Cloud Computing</span
-                    ><small>Data Science</small>
-                  </h3>
-                  <p></p>
-                </div>
-              </div>
-
-              <div class="timeline-wrapper">
-                <div class="timeline-yr">
-                  <span>2020</span>
-                </div>
-                <div class="timeline-info">
-                  <h3>
-                    <span>Mobile Application Development </span
-                    ><small>Computer Science</small>
-                  </h3>
-                  <p>
-                    <a
-                      href="https://github.com/WayneJWZLemon/WebBrowserApp"
-                      class="badge badge-danger"
-                      target="blank"
-                      >Link to the project</a
-                    >
-                  </p>
-                </div>
-              </div>
-
-              <div class="timeline-wrapper">
-                <div class="timeline-yr">
-                  <span>2020</span>
-                </div>
-                <div class="timeline-info">
-                  <h3>
-                    <span>Foundations of Machine Learning</span
-                    ><small>Data Science</small>
-                  </h3>
-                  <p></p>
-                </div>
-              </div>
-
-              <div class="timeline-wrapper">
-                <div class="timeline-yr">
-                  <span>2020</span>
-                </div>
-                <div class="timeline-info">
-                  <h3>
-                    <span>Systems Programming and Operating Systems</span
-                    ><small>Computer Science</small>
-                  </h3>
-                  <p></p>
-                </div>
-              </div>
-            </div>
+      <!-- ======= Resume Section ======= -->
+      <section id="resume" class="resume">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>Experience</h2>
           </div>
 
-          <div class="col-lg-6 col-12">
-            <h2 class="mb-4">Experiences</h2>
-            <div class="timeline">
-              <div class="timeline-wrapper">
-                <div class="timeline-yr">
-                  <span>2023</span>
-                </div>
-                <div class="timeline-info">
-                  <h3>
-                    <span>Software Developer</span
-                    ><small>SAP Next Talent</small>
-                  </h3>
-                  <p>
-                    - Developed intuitive user interfaces with React, delivering
-                    seamless NFT collection management for users while
-                    harnessing the capabilities of stable diffusion models to
-                    create breathtaking artwork. <br />
-                    - Utilized Go and gRPC to seamlessly interact with a Web3
-                    interface server, enabling smooth execution of read/write
-                    operations on a PostgreSQL database <br />
-                    - Implemented a search feature and time filter on the
-                    internal audit log page using React, Moment.js, and Apollo
-                    GraphOS.
-                    <br />
-                    - Refactored the existing React state management code from
-                    Redux to Context API.<br />
-                    - Improved the semantic search functionality used in the
+          <div class="row">
+            <div class="col-lg-6 mx-auto">
+              <h3 class="resume-title">SAP</h3>
+              <div class="resume-item">
+                <h4>Software Developer @ SAP Next Talent</h4>
+                <h5>January 2023 - Present</h5>
+                <p>
+                  <em>Palo Alto, CA</em>
+                </p>
+                <ul>
+                  <li>
+                    Actively drove feature development to integrate visual AI
+                    services (DALL-E, stable diffusion models) for creating a
+                    unified design studio utilized by internal customer
+                    experience teams.
+                  </li>
+                  <li>
+                    Refactored the existing React state management code from
+                    Redux to Context API.
+                  </li>
+                  <li>
+                    Implemented a search feature and time filter on the internal
+                    audit log page using React, Moment.js, and Apollo GraphOS.
+                  </li>
+                  <li>
+                    Improved the semantic search functionality used in the
                     product page by adjusting the sentence embedding model and
                     Elasticsearch Query.
-                  </p>
-                </div>
+                  </li>
+                  <li>
+                    Utilized Go and gRPC to seamlessly interact with a Web3
+                    interface server, enabling smooth execution of read/write
+                    operations on a PostgreSQL database.
+                  </li>
+                </ul>
               </div>
-            </div>
 
-            <div class="timeline">
-              <div class="timeline-wrapper">
-                <div class="timeline-yr">
-                  <span>2022</span>
-                </div>
-                <div class="timeline-info">
-                  <h3>
-                    <span>Software Engineering Intern</span
-                    ><small>Penn Mutual</small>
-                  </h3>
-                  <p>
-                    June 2022 -- October 2022
-                    <br />
-                    - Maintained and updated web pages that are used by internal
+              <h3 class="resume-title">Penn Mutual</h3>
+              <div class="resume-item">
+                <h4>Software Engineering Intern</h4>
+                <h5>May 2022 - October 2022</h5>
+                <p><em>Philadelphia, PA</em></p>
+                <ul>
+                  <li>
+                    Maintained and updated web pages utilized by internal
                     insurance underwriters.
-                    <br />
-                    (jQuery | Spring Framework)
-                  </p>
-                </div>
+                  </li>
+                  <li>
+                    Developed production-ready web applications using Spring
+                    framework and implemented UI changes using jQuery.
+                  </li>
+                  <li>
+                    Utilized MyBatis to write dynamic SQL queries for performing
+                    CRUD operations on the system database.
+                  </li>
+                </ul>
+              </div>
+              <div class="resume-item">
+                <h3>
+                  Temple University Center for Computational Mathematics and
+                  Modeling
+                </h3>
+                <h4>Undergraduate Researcher</h4>
+                <h5>January 2022 - May 2022</h5>
+                <p><em>Philadelphia, PA</em></p>
+                <ul>
+                  <li>
+                    Improved the accessibility of the neuroscientific VR
+                    software by refactoring it with the Unity XR Plug-in
+                    framework that enables direct integrations with multiple VR
+                    vendors.
+                  </li>
+                </ul>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Resume Section -->
 
-            <div class="timeline">
-              <div class="timeline-wrapper">
-                <div class="timeline-yr">
-                  <span>2022</span>
-                </div>
-                <div class="timeline-info">
-                  <h3>
-                    <span>Undergraduate Researcher</span
-                    ><small>Temple Univeristy</small>
-                  </h3>
-                  <p>
-                    Making contribution to a research project with the aim to
-                    develop visualization tools for virtual reality based
-                    computational tool for simulating brain cell activity.
+      <!-- ======= Portfolio Section ======= -->
+      <section id="portfolio" class="portfolio section-bg">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>Portfolio</h2>
+            <p>
+              Below, you'll find a selection of my work samples and personal
+              projects. Feel free to explore them!
+            </p>
+          </div>
+
+          <div class="row">
+            <div
+              class="col-lg-12 d-flex justify-content-center"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <ul id="portfolio-flters">
+                <li data-filter="*" class="filter-active">All</li>
+                <li data-filter=".filter-mobile">Mobile</li>
+                <li data-filter=".filter-ml">Machine Learning</li>
+                <li data-filter=".filter-web">Web</li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            class="row portfolio-container"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-ml">
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/portfolio/portfolio-1.png"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Painting Converter</h4>
+                  <!-- <p>A Flask app with Bootstrap that allows users to</p> -->
+                  <div class="portfolio-links">
                     <a
-                      href="https://github.com/c2m2/Neuro-VISOR"
-                      class="badge badge-warning"
-                      target="blank"
-                      >Link to the project</a
-                    >
-                  </p>
+                      href="assets/img/portfolio/portfolio-1.png"
+                      data-gallery="portfolioGallery"
+                      class="portfolio-lightbox"
+                      title="A Flask application with Bootstrap that enables users to convert photos into paintings using a TensorFlow model."
+                      ><i class="bx bx-plus"></i
+                    ></a>
+                    <a
+                      href="portfolio-details.html"
+                      class="portfolio-details-lightbox"
+                      data-glightbox="type: external"
+                      title="Portfolio Details"
+                      ><i class="bx bx-link"></i
+                    ></a>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div class="timeline">
-              <div class="timeline-wrapper">
-                <div class="timeline-yr">
-                  <span>2021</span>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/portfolio/portfolio-2.png"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Android Mobile Browser</h4>
+                  <div class="portfolio-links">
+                    <a
+                      href="assets/img/portfolio/portfolio-2.png"
+                      data-gallery="portfolioGallery"
+                      class="portfolio-lightbox"
+                      title="A web browsing app for Android that features a responsive design, seamlessly switching between portrait and landscape modes. It includes functionalities such as saving websites to bookmarks and sharing content across different mobile applications."
+                      ><i class="bx bx-plus"></i
+                    ></a>
+                  </div>
                 </div>
-                <div class="timeline-info">
-                  <h3>
-                    <span>Student Peer Tutor</span
-                    ><small>Temple Univeristy</small>
-                  </h3>
-                  <p>
-                    Assisting undergraduate students with assignments in
-                    programming languages like Python, Java, and C.
-                  </p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-mobile">
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/portfolio/portfolio-3.png"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Graffiti</h4>
+                  <div class="portfolio-links">
+                    <a
+                      href="assets/img/portfolio/portfolio-3.png"
+                      data-gallery="portfolioGallery"
+                      class="portfolio-lightbox"
+                      title="A location based content-sharing app developed for iOS and Android platforms. Built using the Unity Engine and incorporates the Unity AR Foundation framework, enabling users to place augmented reality (AR) objects with videos or photos in real-world environments. (C#, Unity, AWS S3, AWS DynamoDB, Google Maps API)"
+                      ><i class="bx bx-plus"></i
+                    ></a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <!-- End Portfolio Section -->
+    </main>
+    <!-- End #main -->
 
-    <div id="icon-bar" class="icon-bar">
-      <a href="https://github.com/WayneJWZLemon" class="github" target="blank"
-        ><i class="fa fa-github"></i
-      ></a>
-      <a
-        href="https://www.linkedin.com/in/j-wayne-zheng"
-        class="linkedin"
-        target="blank"
-        ><i class="fa fa-linkedin"></i
-      ></a>
-    </div>
+    <div id="preloader"></div>
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
 
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/Headroom.js"></script>
-    <script src="js/jQuery.headroom.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/smoothscroll.js"></script>
-    <script src="js/custom.js"></script>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
 
-    <script>
-      function ShowAndHideContactBar() {
-        var x = document.getElementById("icon-bar");
-        if (x.style.display === "block") {
-          x.style.display = "none";
-        } else {
-          x.style.display = "block";
-        }
-      }
-
-      var owl = $(".owl-carousel");
-      owl.owlCarousel({
-        items: 3,
-        loop: true,
-        margin: 10,
-        autoplay: true,
-        autoplayTimeout: 5000,
-        autoplayHoverPause: true,
-      });
-      owl.trigger("play.owl.autoplay", [9000]);
-    </script>
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
