@@ -78,6 +78,11 @@
             >
           </li>
           <li>
+            <a href="#portfolio" class="nav-link scrollto"
+              ><i class="bx bx-book-content"></i> <span>Portfolio</span></a
+            >
+          </li>
+          <li>
             <a href="#about" class="nav-link scrollto"
               ><i class="bx bx-user"></i> <span>About</span></a
             >
@@ -85,11 +90,6 @@
           <li>
             <a href="#resume" class="nav-link scrollto"
               ><i class="bx bx-file-blank"></i> <span>Resume</span></a
-            >
-          </li>
-          <li>
-            <a href="#portfolio" class="nav-link scrollto"
-              ><i class="bx bx-book-content"></i> <span>Portfolio</span></a
             >
           </li>
         </ul>
@@ -134,6 +134,115 @@
     <!-- End Hero -->
 
     <main id="main">
+      <!-- ======= Portfolio Section ======= -->
+      <section id="portfolio" class="portfolio section-bg">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>Portfolio</h2>
+            <p>
+              Below, you'll find a selection of my work samples and personal
+              projects. Feel free to explore them!
+            </p>
+          </div>
+
+          <div class="row">
+            <div
+              class="col-lg-12 d-flex justify-content-center"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <ul id="portfolio-flters">
+                <li data-filter="*" class="filter-active">All</li>
+                <li data-filter=".filter-mobile">Mobile</li>
+                <li data-filter=".filter-ml">Machine Learning</li>
+                <li data-filter=".filter-web">Web</li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            class="row portfolio-container"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-ml">
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/portfolio/portfolio-1.png"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Painting Converter</h4>
+                  <!-- <p>A Flask app with Bootstrap that allows users to</p> -->
+                  <div class="portfolio-links">
+                    <a
+                      href="assets/img/portfolio/portfolio-1.png"
+                      data-gallery="portfolioGallery"
+                      class="portfolio-lightbox"
+                      title="A Flask application with Bootstrap that enables users to convert photos into paintings using a TensorFlow model."
+                      ><i class="bx bx-fullscreen"></i
+                    ></a>
+                    <a
+                      href="portfolio-details.html"
+                      class="portfolio-details-lightbox"
+                      data-glightbox="type: external"
+                      title="Portfolio Details"
+                      ><i class="bx bx-link"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/portfolio/portfolio-2.png"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Android Mobile Browser</h4>
+                  <div class="portfolio-links">
+                    <a
+                      href="assets/img/portfolio/portfolio-2.png"
+                      data-gallery="portfolioGallery"
+                      class="portfolio-lightbox"
+                      title="A web browsing app for Android that features a responsive design, seamlessly switching between portrait and landscape modes. It includes functionalities such as saving websites to bookmarks and sharing content across different mobile applications."
+                      ><i class="bx bx-fullscreen"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-mobile">
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/portfolio/portfolio-3.png"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Graffiti</h4>
+                  <div class="portfolio-links">
+                    <a
+                      href="assets/img/portfolio/portfolio-3.png"
+                      data-gallery="portfolioGallery"
+                      class="portfolio-lightbox"
+                      title="A location based content-sharing app developed for iOS and Android platforms. Built using the Unity Engine and incorporates the Unity AR Foundation framework, enabling users to place augmented reality (AR) objects with videos or photos in real-world environments. (C#, Unity, AWS S3, AWS DynamoDB, Google Maps API)"
+                      ><i class="bx bx-fullscreen"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Portfolio Section -->
+
       <!-- ======= About Section ======= -->
       <section id="about" class="about">
         <div class="container" data-aos="fade-up">
@@ -341,115 +450,6 @@
         </div>
       </section>
       <!-- End Resume Section -->
-
-      <!-- ======= Portfolio Section ======= -->
-      <section id="portfolio" class="portfolio section-bg">
-        <div class="container" data-aos="fade-up">
-          <div class="section-title">
-            <h2>Portfolio</h2>
-            <p>
-              Below, you'll find a selection of my work samples and personal
-              projects. Feel free to explore them!
-            </p>
-          </div>
-
-          <div class="row">
-            <div
-              class="col-lg-12 d-flex justify-content-center"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <ul id="portfolio-flters">
-                <li data-filter="*" class="filter-active">All</li>
-                <li data-filter=".filter-mobile">Mobile</li>
-                <li data-filter=".filter-ml">Machine Learning</li>
-                <li data-filter=".filter-web">Web</li>
-              </ul>
-            </div>
-          </div>
-
-          <div
-            class="row portfolio-container"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-ml">
-              <div class="portfolio-wrap">
-                <img
-                  src="assets/img/portfolio/portfolio-1.png"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>Painting Converter</h4>
-                  <!-- <p>A Flask app with Bootstrap that allows users to</p> -->
-                  <div class="portfolio-links">
-                    <a
-                      href="assets/img/portfolio/portfolio-1.png"
-                      data-gallery="portfolioGallery"
-                      class="portfolio-lightbox"
-                      title="A Flask application with Bootstrap that enables users to convert photos into paintings using a TensorFlow model."
-                      ><i class="bx bx-plus"></i
-                    ></a>
-                    <a
-                      href="portfolio-details.html"
-                      class="portfolio-details-lightbox"
-                      data-glightbox="type: external"
-                      title="Portfolio Details"
-                      ><i class="bx bx-link"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-              <div class="portfolio-wrap">
-                <img
-                  src="assets/img/portfolio/portfolio-2.png"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>Android Mobile Browser</h4>
-                  <div class="portfolio-links">
-                    <a
-                      href="assets/img/portfolio/portfolio-2.png"
-                      data-gallery="portfolioGallery"
-                      class="portfolio-lightbox"
-                      title="A web browsing app for Android that features a responsive design, seamlessly switching between portrait and landscape modes. It includes functionalities such as saving websites to bookmarks and sharing content across different mobile applications."
-                      ><i class="bx bx-plus"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-mobile">
-              <div class="portfolio-wrap">
-                <img
-                  src="assets/img/portfolio/portfolio-3.png"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>Graffiti</h4>
-                  <div class="portfolio-links">
-                    <a
-                      href="assets/img/portfolio/portfolio-3.png"
-                      data-gallery="portfolioGallery"
-                      class="portfolio-lightbox"
-                      title="A location based content-sharing app developed for iOS and Android platforms. Built using the Unity Engine and incorporates the Unity AR Foundation framework, enabling users to place augmented reality (AR) objects with videos or photos in real-world environments. (C#, Unity, AWS S3, AWS DynamoDB, Google Maps API)"
-                      ><i class="bx bx-plus"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Portfolio Section -->
     </main>
     <!-- End #main -->
 
