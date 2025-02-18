@@ -39,7 +39,7 @@
 
     <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i"
       rel="stylesheet"
     />
 
@@ -71,61 +71,81 @@
     <!-- ======= Header ======= -->
     <header id="header" class="d-flex flex-column justify-content-center">
       <nav id="navbar" class="navbar nav-menu">
-        <ul>
-          <li>
-            <a href="#hero" class="nav-link scrollto active"
-              ><i class="bx bx-home"></i> <span>Home</span></a
+        <ul class="nav flex-column position-relative">
+          <li class="nav-item mb-4">
+            <a
+              href="#hero"
+              class="nav-link scrollto active p-3 rounded-pill shadow-sm bg-white bg-opacity-75 d-flex align-items-center"
             >
+              <i class="bx bx-home fs-4 text-primary"></i>
+              <span class="text-black ms-3 fw-medium opacity-75">Home</span>
+            </a>
           </li>
-          <li>
-            <a href="#portfolio" class="nav-link scrollto"
-              ><i class="bx bx-book-content"></i> <span>Portfolio</span></a
+          <li class="nav-item mb-4">
+            <a
+              href="#portfolio"
+              class="nav-link scrollto p-3 rounded-pill shadow-sm bg-white bg-opacity-75 d-flex align-items-center"
             >
+              <i class="bx bx-book-content fs-4 text-primary"></i>
+              <span class="text-black ms-3 fw-medium opacity-75"
+                >Portfolio</span
+              >
+            </a>
           </li>
-          <li>
-            <a href="#about" class="nav-link scrollto"
-              ><i class="bx bx-user"></i> <span>About</span></a
+          <li class="nav-item mb-4">
+            <a
+              href="#about"
+              class="nav-link scrollto p-3 rounded-pill shadow-sm bg-white bg-opacity-75 d-flex align-items-center"
             >
+              <i class="bx bx-user fs-4 text-primary"></i>
+              <span class="text-black ms-3 fw-medium opacity-75">About</span>
+            </a>
           </li>
-          <li>
-            <a href="#resume" class="nav-link scrollto"
-              ><i class="bx bx-file-blank"></i> <span>Resume</span></a
+          <li class="nav-item">
+            <a
+              href="#resume"
+              class="nav-link scrollto p-3 rounded-pill shadow-sm bg-white bg-opacity-75 d-flex align-items-center"
             >
+              <i class="bx bx-file-blank fs-4 text-primary"></i>
+              <span class="text-black ms-3 fw-medium opacity-75">Resume</span>
+            </a>
           </li>
         </ul>
       </nav>
-      <!-- .nav-menu -->
     </header>
     <!-- End Header -->
 
     <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex flex-column justify-content-center">
+    <section
+      id="hero"
+      class="min-vh-100 d-flex flex-column justify-content-center position-relative"
+    >
       <div class="container" data-aos="zoom-in" data-aos-delay="100">
-        <h1>Wayne Zheng</h1>
-        <p>
+        <h1 class="display-3 fw-bold mb-4">Wayne Zheng</h1>
+        <p class="lead mb-4">
           I'm
           <span
-            class="typed"
+            class="typed text-primary"
             data-typed-items="Developer, Data Scientist"
           ></span>
         </p>
-        <div class="social-links">
+        <div class="social-links d-flex gap-3">
           <a
             href="https://www.linkedin.com/in/j-wayne-zheng"
             target="_blank"
-            class="linkedin"
+            class="btn btn-light rounded-circle p-3"
             ><i class="bx bxl-linkedin"></i
           ></a>
           <a
             href="https://github.com/JW-Wayne-Zheng"
             target="_blank"
-            class="github"
+            class="btn btn-light rounded-circle p-3"
             ><i class="bx bxl-github"></i
           ></a>
           <a
             href="https://twitter.com/jwwaynezheng"
             target="_blank"
-            class="twitter"
+            class="btn btn-light rounded-circle p-3"
             ><i class="bx bxl-twitter"></i
           ></a>
         </div>
@@ -166,105 +186,143 @@
             data-aos-delay="200"
           >
             <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-ml">
-              <div class="portfolio-wrap">
+              <div class="portfolio-wrap rounded-3 overflow-hidden shawdow-sm">
                 <img
                   src="assets/img/portfolio/portfolio-1.png"
-                  class="img-fluid"
-                  alt=""
+                  class="img-fluid transition hover-scale"
+                  alt="Project Image"
                 />
-                <div class="portfolio-info">
-                  <h4>Painting Converter</h4>
-                  <!-- <p>A Flask app with Bootstrap that allows users to</p> -->
-                  <div class="portfolio-links">
+                <div class="portfolio-info p-4 bg-white">
+                  <h4 class="fw-bold mb-3">Painting Converter</h4>
+                  <div class="portfolio-links d-flex gap-2">
                     <a
                       href="assets/img/portfolio/portfolio-1.png"
                       data-gallery="portfolioGallery"
                       class="portfolio-lightbox"
                       title="A Flask application with Bootstrap that enables users to convert photos into paintings using a TensorFlow model."
-                      ><i class="bx bx-fullscreen"></i
-                    ></a>
+                      ><i class="bx bx-fullscreen me-1"></i>View</a
+                    >
                     <a
                       href="portfolio-details.html"
                       class="portfolio-details-lightbox"
                       data-glightbox="type: external"
                       title="Portfolio Details"
-                      ><i class="bx bx-link"></i
-                    ></a>
+                      ><i class="bx bx-link me-1"></i>Details</a
+                    >
+                    <a
+                      href="https://image-to-painting-converter-2c3c7ded7c80.herokuapp.com/"
+                      target="_blank"
+                      data-glightbox="type: external"
+                      title="Portfolio Details"
+                      ><i class="bx bx-link me-1"></i>Demo</a
+                    >
                   </div>
                 </div>
               </div>
             </div>
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-              <div class="portfolio-wrap">
+              <div class="portfolio-wrap rounded-3 overflow-hidden shawdow-sm">
                 <img
                   src="assets/img/portfolio/portfolio-2.png"
-                  class="img-fluid"
-                  alt=""
+                  class="img-fluid transition hover-scale"
+                  alt="Project Image"
                 />
-                <div class="portfolio-info">
-                  <h4>Android Mobile Browser</h4>
-                  <div class="portfolio-links">
+                <div class="portfolio-info p-4 bg-white">
+                  <h4 class="fw-bold mb-3">Android Mobile Browser</h4>
+                  <div class="portfolio-links d-flex gap-2">
                     <a
                       href="assets/img/portfolio/portfolio-2.png"
                       data-gallery="portfolioGallery"
                       class="portfolio-lightbox"
                       title="A web browsing app for Android that features a responsive design, seamlessly switching between portrait and landscape modes. It includes functionalities such as saving websites to bookmarks and sharing content across different mobile applications."
-                      ><i class="bx bx-fullscreen"></i
-                    ></a>
+                      ><i class="bx bx-fullscreen me-1"></i>View</a
+                    >
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item filter-mobile">
-              <div class="portfolio-wrap">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-ml">
+              <div class="portfolio-wrap rounded-3 overflow-hidden shawdow-sm">
                 <img
                   src="assets/img/portfolio/portfolio-3.png"
-                  class="img-fluid"
-                  alt=""
+                  class="img-fluid transition hover-scale"
+                  alt="Project Image"
                 />
-                <div class="portfolio-info">
-                  <h4>Graffiti</h4>
-                  <div class="portfolio-links">
+                <div class="portfolio-info p-4 bg-white">
+                  <h4 class="fw-bold mb-3">Graffiti</h4>
+                  <div class="portfolio-links d-flex gap-2">
                     <a
                       href="assets/img/portfolio/portfolio-3.png"
                       data-gallery="portfolioGallery"
                       class="portfolio-lightbox"
                       title="A location based content-sharing app developed for iOS and Android platforms. Built using the Unity Engine and incorporates the Unity AR Foundation framework, enabling users to place augmented reality (AR) objects with videos or photos in real-world environments. (C#, Unity, AWS S3, AWS DynamoDB, Google Maps API)"
-                      ><i class="bx bx-fullscreen"></i
-                    ></a>
+                      ><i class="bx bx-fullscreen me-1"></i>View</a
+                    >
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-ml">
-            <div class="portfolio-wrap">
-              <img
-                src="assets/img/portfolio/portfolio-4.png"
-                class="img-fluid"
-                alt=""
-              />
-              <div class="portfolio-info">
-                <h4>Visual Service Studio</h4>
-                <!-- <p>A Flask app with Bootstrap that allows users to</p> -->
-                <div class="portfolio-links">
-                  <a
-                    href="assets/img/portfolio/portfolio-4.png"
-                    data-gallery="portfolioGallery"
-                    class="portfolio-lightbox"
-                    title="A reusable React component package for image generation and editing, leveraging machine learning models like Stable Diffusion, Amazon Titan, and DALL-E, available via npm."
-                    ><i class="bx bx-fullscreen"></i
-                  ></a>
-                  <a
-                    href="portfolio-details4.html"
-                    class="portfolio-details-lightbox"
-                    data-glightbox="type: external"
-                    title="Portfolio Details"
-                    ><i class="bx bx-link"></i
-                  ></a>
+          <div
+            class="row portfolio-container"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="col-lg-4 col-md-6 portfolio-item filter-web filter-ml">
+              <div class="portfolio-wrap rounded-3 overflow-hidden shawdow-sm">
+                <img
+                  src="assets/img/portfolio/portfolio-4.png"
+                  class="img-fluid transition hover-scale"
+                  alt="Project Image"
+                />
+                <div class="portfolio-info p-4 bg-white">
+                  <h4 class="fw-bold mb-3">Visual Service Studio</h4>
+                  <div class="portfolio-links d-flex gap-2">
+                    <a
+                      href="assets/img/portfolio/portfolio-4.png"
+                      data-gallery="portfolioGallery"
+                      class="portfolio-lightbox"
+                      title="A reusable React component package for image generation and editing, leveraging machine learning models like Stable Diffusion, Amazon Titan, and DALL-E, available via npm."
+                      ><i class="bx bx-fullscreen me-1"></i>View</a
+                    >
+                    <a
+                      href="portfolio-details4.html"
+                      class="portfolio-details-lightbox"
+                      data-glightbox="type: external"
+                      title="Portfolio Details"
+                      ><i class="bx bx-link me-1"></i>Details</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+              <div class="portfolio-wrap rounded-3 overflow-hidden shawdow-sm">
+                <img
+                  src="assets/img/portfolio/minimalist-resume-builder.webp"
+                  class="img-fluid transition hover-scale"
+                  alt="Resume Builder Project"
+                />
+                <div class="portfolio-info p-4 bg-white">
+                  <h4 class="fw-bold mb-3">Minimalist Resume Builder</h4>
+                  <div class="portfolio-links d-flex gap-2">
+                    <a
+                      href="assets/img/portfolio/minimalist-resume-builder.webp"
+                      data-gallery="portfolioGallery"
+                      class="portfolio-lightbox"
+                      title="A web application that enables users to create professional resumes through an intuitive form interface. Features include real-time preview, PDF generation, and a clean minimalist design built with React and TailwindCSS."
+                      ><i class="bx bx-fullscreen me-1"></i>View</a
+                    >
+                    <a
+                      href="https://minimalist-resume-builder-1ad73fbf31e4.herokuapp.com/"
+                      target="_blank"
+                      title="Live Demo"
+                      ><i class="bx bx-link me-1"></i>Demo</a
+                    >
+                  </div>
                 </div>
               </div>
             </div>
@@ -274,108 +332,163 @@
       <!-- End Portfolio Section -->
 
       <!-- ======= About Section ======= -->
-      <section id="about" class="about">
+      <section id="about" class="about py-5">
         <div class="container" data-aos="fade-up">
           <div class="section-title">
-            <h2>About</h2>
-            <p>
+            <h2 class="display-4 fw-bold text-center mb-4">About</h2>
+            <p class="lead text-muted text-center">
               Software Engineer with expertise in building scalable,
-              high-performance systems and API-driven plat- forms. Experienced
-              in full-stack development, distributed systems, and machine
-              learning. Passionate about leveraging innovative technologies to
-              solve complex problems and deliver impactful solutions in
-              fast-paced environments.
+              high-performance systems and API-driven platforms. Experienced in
+              full-stack development, distributed systems, and machine learning.
+              Passionate about leveraging innovative technologies to solve
+              complex problems.
             </p>
           </div>
 
-          <div class="row">
-            <div class="col-lg-8 pt-4 pt-lg-0 content m-auto">
-              <h3>Software Engineering &amp; Machine Learning</h3>
-              <div class="row">
-                <div class="col-lg-6">
-                  <ul>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Location:</strong>
-                      <span> SF Bay, NYC, or Remote </span>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Degree:</strong>
-                      <span>B.S. Computer Science & Data Science</span>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Freelance:</strong> <span>Available</span>
-                    </li>
-                  </ul>
+          <div class="row justify-content-center gy-4">
+            <div class="col-lg-8">
+              <div class="card border-0 shadow-m p-4 mb-4 hover-lift">
+                <div class="d-flex align-items-center mb-4">
+                  <i class="bi bi-person-workspace fs-2 text-primary me-3"></i>
+                  <h3
+                    class="card-title mb-4"
+                    style="margin-bottom: 0rem !important"
+                  >
+                    Software Engineering & Machine Learning
+                  </h3>
+                </div>
+
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <ul class="list-unstyled">
+                      <li class="mb-3 d-flex align-items-center">
+                        <i class="bi bi-geo-alt text-primary me-2"></i>
+                        <div>
+                          <strong class="d-block">Location</strong>
+                          <span class="text-muted">SF Bay, NYC, or Remote</span>
+                        </div>
+                      </li>
+                      <li class="mb-3 d-flex align-items-center">
+                        <i class="bi bi-mortarboard text-primary me-2"></i>
+                        <div>
+                          <strong class="d-block">Degree</strong>
+                          <span class="text-muted"
+                            >B.S. Computer Science & Data Science</span
+                          >
+                        </div>
+                      </li>
+                      <li class="mb-3 d-flex align-items-center">
+                        <i class="bi bi-briefcase text-primary me-2"></i>
+                        <div>
+                          <strong class="d-block">Freelance</strong>
+                          <span class="text-success">Available</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-              <h3>Technology Stack</h3>
-              <div class="row">
-                <div class="col-lg-6">
-                  <ul>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      JavaScript
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      Python
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      Java
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      C#
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      React
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      TensorFlow
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      SQL
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-lg-6">
-                  <ul>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      Django
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      Unity
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      Android Studio
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      AWS
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      GraphQL
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      Golang
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      Spring
-                    </li>
-                  </ul>
+
+              <!-- Technology Stack with modern card design -->
+              <div
+                class="card shadow-sm border-0 p-4"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <h3 class="card-title text-primary mb-4">Technology Stack</h3>
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <ul class="list-group list-group-flush">
+                      <li
+                        class="list-group-item border-0 d-flex align-items-center"
+                      >
+                        <i class="bi bi-code-square text-primary me-2"></i>
+                        JavaScript
+                      </li>
+                      <li
+                        class="list-group-item border-0 d-flex align-items-center"
+                      >
+                        <i class="bi bi-code-square text-primary me-2"></i>
+                        Python
+                      </li>
+                      <li
+                        class="list-group-item border-0 d-flex align-items-center"
+                      >
+                        <i class="bi bi-code-square text-primary me-2"></i>
+                        Java
+                      </li>
+                      <li
+                        class="list-group-item border-0 d-flex align-items-center"
+                      >
+                        <i class="bi bi-code-square text-primary me-2"></i>
+                        C#
+                      </li>
+                      <li
+                        class="list-group-item border-0 d-flex align-items-center"
+                      >
+                        <i class="bi bi-code-square text-primary me-2"></i>
+                        React
+                      </li>
+                      <li
+                        class="list-group-item border-0 d-flex align-items-center"
+                      >
+                        <i class="bi bi-code-square text-primary me-2"></i>
+                        TensorFlow
+                      </li>
+                      <li
+                        class="list-group-item border-0 d-flex align-items-center"
+                      >
+                        <i class="bi bi-code-square text-primary me-2"></i>
+                        SQL
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <ul class="list-group list-group-flush">
+                      <li
+                        class="list-group-item border-0 d-flex align-items-center"
+                      >
+                        <i class="bi bi-code-square text-primary me-2"></i>
+                        Django
+                      </li>
+                      <li
+                        class="list-group-item border-0 d-flex align-items-center"
+                      >
+                        <i class="bi bi-code-square text-primary me-2"></i>
+                        Unity
+                      </li>
+                      <li
+                        class="list-group-item border-0 d-flex align-items-center"
+                      >
+                        <i class="bi bi-code-square text-primary me-2"></i>
+                        Android Studio
+                      </li>
+                      <li
+                        class="list-group-item border-0 d-flex align-items-center"
+                      >
+                        <i class="bi bi-code-square text-primary me-2"></i>
+                        AWS
+                      </li>
+                      <li
+                        class="list-group-item border-0 d-flex align-items-center"
+                      >
+                        <i class="bi bi-code-square text-primary me-2"></i>
+                        GraphQL
+                      </li>
+                      <li
+                        class="list-group-item border-0 d-flex align-items-center"
+                      >
+                        <i class="bi bi-code-square text-primary me-2"></i>
+                        Golang
+                      </li>
+                      <li
+                        class="list-group-item border-0 d-flex align-items-center"
+                      >
+                        <i class="bi bi-code-square text-primary me-2"></i>
+                        Spring
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -394,85 +507,135 @@
           <div class="row">
             <div class="col-lg-6 mx-auto">
               <h3 class="resume-title">SAP</h3>
-              <div class="resume-item">
-                <h4>Software Developer</h4>
-                <h5>January 2023 - Present</h5>
-                <p>
-                  <em>Palo Alto, CA</em>
+              <div class="resume-item card border-0 shadow-sm p-4 mb-4">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
+                  <h4 class="fw-bold mb-0">Software Developer</h4>
+                  <h5 class="badge bg-primary">January 2023 - Present</h5>
+                </div>
+                <p class="text-muted mb-3">
+                  <i class="bi bi-geo-alt me-2"></i>Palo Alto, CA
                 </p>
-                <ul>
-                  <li>
-                    Designed and maintained API platforms for blockchain-powered
-                    NFT management systems, enabling enterprise clients to
-                    manage loyalty programs and transfer NFTs using React,
-                    TypeScript, and GraphQL.
+                <ul class="list-unstyled mb-0">
+                  <li class="mb-3 d-flex">
+                    <i class="bi bi-check2-circle text-primary me-2 mt-1"></i>
+                    <span
+                      >Designed and maintained API platforms for
+                      blockchain-powered NFT management systems, enabling
+                      enterprise clients to manage loyalty programs and transfer
+                      NFTs using React, TypeScript, and GraphQL.</span
+                    >
                   </li>
-                  <li>
-                    Owned the development of a reusable NPM package for visual
-                    AI services, providing modular UI components and integrating
-                    API logic for image generation and editing workflows.
+                  <li class="mb-3 d-flex">
+                    <i class="bi bi-check2-circle text-primary me-2 mt-1"></i>
+                    <span
+                      >Owned the development of a reusable NPM package for
+                      visual AI services, providing modular UI components and
+                      integrating API logic for image generation and editing
+                      workflows.</span
+                    >
                   </li>
-                  <li>
-                    Developed scalable, distributed systems for visual
-                    generative AI platforms, integrating OpenAI DALL-E and
-                    Amazon Titan models for creative workflows.
+                  <li class="mb-3 d-flex">
+                    <i class="bi bi-check2-circle text-primary me-2 mt-1"></i>
+                    <span
+                      >Developed scalable, distributed systems for visual
+                      generative AI platforms, integrating OpenAI DALL-E and
+                      Amazon Titan models for creative workflows.</span
+                    >
                   </li>
-                  <li>
-                    Automated CI/CD pipelines using Jenkins and Docker,
-                    deploying containerized applications to Azure, ensuring
-                    reliability and scalability.
+                  <li class="mb-3 d-flex">
+                    <i class="bi bi-check2-circle text-primary me-2 mt-1"></i>
+                    <span
+                      >Automated CI/CD pipelines using Jenkins and Docker,
+                      deploying containerized applications to Azure, ensuring
+                      reliability and scalability.</span
+                    >
                   </li>
-                  <li>
-                    Enhanced semantic search capabilities by integrating
-                    ElasticSearch and advanced embedding models, improving
-                    accuracy for high-volume queries.
+                  <li class="mb-3 d-flex">
+                    <i class="bi bi-check2-circle text-primary me-2 mt-1"></i>
+                    <span
+                      >Enhanced semantic search capabilities by integrating
+                      ElasticSearch and advanced embedding models, improving
+                      accuracy for high-volume queries.</span
+                    >
                   </li>
-                  <li>
-                    Built secure, fault-tolerant services adhering to
-                    enterprise-grade compliance standards.
+                  <li class="mb-3 d-flex">
+                    <i class="bi bi-check2-circle text-primary me-2 mt-1"></i>
+                    <span
+                      >Built secure, fault-tolerant services adhering to
+                      enterprise-grade compliance standards.</span
+                    >
                   </li>
-                  <li>
-                    Collaborated with product managers, UX designers, and
-                    engineers to deliver features, improve workflows, and mentor
-                    interns.
+                  <li class="mb-3 d-flex">
+                    <i class="bi bi-check2-circle text-primary me-2 mt-1"></i>
+                    <span
+                      >Collaborated with product managers, UX designers, and
+                      engineers to deliver features, improve workflows, and
+                      mentor interns.</span
+                    >
                   </li>
                 </ul>
               </div>
 
               <h3 class="resume-title">Penn Mutual</h3>
-              <div class="resume-item">
-                <h4>Software Engineering Intern</h4>
-                <h5>May 2022 - October 2022</h5>
-                <p><em>Philadelphia, PA</em></p>
-                <ul>
-                  <li>
-                    Maintained and updated web pages utilized by internal
-                    insurance underwriters.
+              <div class="resume-item card border-0 shadow-sm p-4 mb-4">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
+                  <h4 class="fw-bold mb-0">Software Engineering Intern</h4>
+                  <h5 class="badge bg-primary">May 2022 - October 2022</h5>
+                </div>
+                <p class="text-muted mb-3">
+                  <i class="bi bi-geo-alt me-2"></i>Philadelphia, PA
+                </p>
+                <ul class="list-unstyled mb-0">
+                  <li class="mb-3 d-flex">
+                    <i class="bi bi-check2-circle text-primary me-2 mt-1"></i>
+                    <span
+                      >Maintained and updated web pages utilized by internal
+                      insurance underwriters.</span
+                    >
                   </li>
-                  <li>
-                    Developed production-ready web applications using Spring
-                    framework and implemented UI changes using jQuery.
+                  <li class="mb-3 d-flex">
+                    <i class="bi bi-check2-circle text-primary me-2 mt-1"></i>
+                    <span
+                      >Developed production-ready web applications using Spring
+                      framework and implemented UI changes using jQuery.</span
+                    >
                   </li>
-                  <li>
-                    Utilized MyBatis to write dynamic SQL queries for performing
-                    CRUD operations on the system database.
+                  <li class="mb-3 d-flex">
+                    <i class="bi bi-check2-circle text-primary me-2 mt-1"></i>
+                    <span
+                      >Utilized MyBatis to write dynamic SQL queries for
+                      performing CRUD operations on the system database.</span
+                    >
                   </li>
                 </ul>
               </div>
-              <div class="resume-item">
-                <h3>
-                  Temple University Center for Computational Mathematics and
-                  Modeling
-                </h3>
-                <h4>Undergraduate Researcher</h4>
-                <h5>January 2022 - May 2022</h5>
-                <p><em>Philadelphia, PA</em></p>
-                <ul>
-                  <li>
-                    Improved the accessibility of the neuroscientific VR
-                    software by refactoring it with the Unity XR Plug-in
-                    framework that enables direct integrations with multiple VR
-                    vendors.
+              <h3 class="resume-title">
+                Temple University Center for Computational Mathematics and
+                Modeling
+              </h3>
+              <div class="resume-item card border-0 shadow-sm p-4 mb-4">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
+                  <h4 class="fw-bold mb-0">Undergraduate Researcher</h4>
+                  <h5 class="badge bg-primary">January 2022 - May 2022</h5>
+                </div>
+                <p class="text-muted mb-3">
+                  <i class="bi bi-geo-alt me-2"></i>Philadelphia, PA
+                </p>
+                <ul class="list-unstyled mb-0">
+                  <li class="mb-3 d-flex">
+                    <i class="bi bi-check2-circle text-primary me-2 mt-1"></i>
+                    <span
+                      >Improved the accessibility of the neuroscientific VR
+                      software by refactoring it with the Unity XR Plug-in
+                      framework that enables direct integrations with multiple
+                      VR vendors.</span
+                    >
                   </li>
                 </ul>
               </div>
