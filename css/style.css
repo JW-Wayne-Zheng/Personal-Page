@@ -939,6 +939,28 @@ section {
     --font-size-4xl: 1.875rem;
     --spacing-3xl: 2rem;
   }
+  
+  /* Prevent horizontal scroll */
+  body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+  
+  .container {
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid,
+  .about-info {
+    grid-template-columns: 1fr;
+  }
 
   .nav-menu {
     position: fixed;
