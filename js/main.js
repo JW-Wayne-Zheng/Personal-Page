@@ -1,3 +1,5 @@
+import { initAnalytics } from './analytics.js';
+
 // ===== MAIN JAVASCRIPT =====
 
 // Wait for DOM to be fully loaded
@@ -8,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initActiveNavigation();
     initAnimations();
     initExperienceCarousel();
+    initAnalytics();
 });
 
 // ===== MOBILE NAVIGATION =====
@@ -21,6 +24,7 @@ function initMobileNavigation() {
         navToggle.addEventListener('click', function() {
             navMenu.classList.toggle('active');
             navToggle.classList.toggle('active');
+            navToggle.setAttribute('aria-expanded', String(navMenu.classList.contains('active')));
         });
 
         // Close mobile menu when clicking on links
@@ -28,6 +32,7 @@ function initMobileNavigation() {
             link.addEventListener('click', function() {
                 navMenu.classList.remove('active');
                 navToggle.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
             });
         });
 
@@ -36,6 +41,7 @@ function initMobileNavigation() {
             if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
                 navMenu.classList.remove('active');
                 navToggle.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
             }
         });
     }
@@ -225,6 +231,7 @@ function initExperienceCarousel() {
 
     carousels.forEach(carousel => {
         const track = carousel.querySelector('.experience-track');
+        const questTrack = carousel.querySelector('.quest-track');
         const cards = Array.from(carousel.querySelectorAll('.experience-card'));
         const prevButton = carousel.querySelector('.experience-nav.prev');
         const nextButton = carousel.querySelector('.experience-nav.next');
@@ -251,7 +258,30 @@ function initExperienceCarousel() {
 
         const dots = Array.from(dotsContainer.querySelectorAll('.experience-dot'));
 
-        function updateUiState() {
+        function syncQuestNodeIntoView(behavior = 'smooth') {
+            if (!questTrack || questNodes.length === 0) {
+                return;
+            }
+
+            const activeNode = questNodes.find(node => Number(node.dataset.experienceJump) === activeIndex);
+            if (!activeNode) {
+                return;
+            }
+
+            const targetLeft = activeNode.offsetLeft - ((questTrack.clientWidth - activeNode.offsetWidth) / 2);
+            const maxLeft = Math.max(0, questTrack.scrollWidth - questTrack.clientWidth);
+            const clampedLeft = Math.max(0, Math.min(targetLeft, maxLeft));
+            const distance = Math.abs(questTrack.scrollLeft - clampedLeft);
+
+            if (distance > 2) {
+                questTrack.scrollTo({
+                    left: clampedLeft,
+                    behavior
+                });
+            }
+        }
+
+        function updateUiState(questBehavior = 'smooth') {
             if (prevButton) {
                 prevButton.disabled = activeIndex === 0;
             }
@@ -274,6 +304,8 @@ function initExperienceCarousel() {
                     node.removeAttribute('aria-current');
                 }
             });
+
+            syncQuestNodeIntoView(questBehavior);
         }
 
         function goToCard(index, behavior = 'smooth') {
@@ -282,7 +314,7 @@ function initExperienceCarousel() {
                 left: cards[activeIndex].offsetLeft,
                 behavior
             });
-            updateUiState();
+            updateUiState(behavior);
         }
 
         function syncFromScrollPosition() {
@@ -300,7 +332,7 @@ function initExperienceCarousel() {
 
             if (closestIndex !== activeIndex) {
                 activeIndex = closestIndex;
-                updateUiState();
+                updateUiState('auto');
             }
         }
 
@@ -396,9 +428,10 @@ document.addEventListener('keydown', function(e) {
         const navMenu = document.getElementById('nav-menu');
         const navToggle = document.getElementById('nav-toggle');
         
-        if (navMenu && navMenu.classList.contains('active')) {
+        if (navMenu && navToggle && navMenu.classList.contains('active')) {
             navMenu.classList.remove('active');
             navToggle.classList.remove('active');
+            navToggle.setAttribute('aria-expanded', 'false');
         }
     }
 });
@@ -505,30 +538,8 @@ window.addEventListener('error', function(e) {
     // You could send this to an error tracking service
 });
 
-// ===== ANALYTICS HELPERS =====
-function trackEvent(action, category = 'General') {
-    // Google Analytics tracking (if needed)
-    if (typeof gtag !== 'undefined') {
-        gtag('event', action, {
-            'event_category': category,
-            'event_label': window.location.pathname
-        });
-    }
-}
-
-// Track navigation clicks
-document.addEventListener('click', function(e) {
-    if (e.target.classList.contains('nav-link')) {
-        trackEvent('navigation_click', 'Navigation');
-    }
-    
-    if (e.target.classList.contains('project-link')) {
-        trackEvent('project_link_click', 'Projects');
-    }
-    
-    if (e.target.closest('.contact-item')) {
-        trackEvent('contact_click', 'Contact');
-    }
+window.addEventListener('unhandledrejection', function(e) {
+    console.error('Unhandled promise rejection:', e.reason);
 });
 
 console.log('🚀 Wayne Zheng Portfolio - Loaded and Ready!'); 

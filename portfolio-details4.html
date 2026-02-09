@@ -44,13 +44,24 @@
     <!-- Navigation -->
     <nav class="nav">
       <div class="nav-container">
-        <div class="nav-menu">
+        <div class="nav-menu" id="nav-menu">
           <a href="index.html#home" class="nav-link">Home</a>
           <a href="index.html#about" class="nav-link">About</a>
           <a href="index.html#experience" class="nav-link">Experience</a>
           <a href="index.html#projects" class="nav-link">Projects</a>
           <a href="index.html#contact" class="nav-link">Contact</a>
         </div>
+        <button
+          type="button"
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
       </div>
     </nav>
 
@@ -218,6 +229,6 @@
     </section>
 
     <!-- Custom JavaScript -->
-    <script src="js/main.js"></script>
+    <script type="module" src="js/main.js"></script>
   </body>
 </html>

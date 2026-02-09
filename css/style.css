@@ -159,6 +159,71 @@ ul {
   gap: var(--spacing-xl);
 }
 
+.nav-toggle {
+  display: none;
+  margin-left: auto;
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border: 2px solid #111111;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #111111;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.nav-toggle:hover {
+  background: #f2f2f2;
+}
+
+.nav-toggle:focus-visible {
+  outline: 2px solid #111111;
+  outline-offset: 2px;
+}
+
+.nav-toggle .bar {
+  position: absolute;
+  left: 50%;
+  width: 20px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transform: translateX(-50%);
+  transition: transform var(--transition-fast), opacity var(--transition-fast), top var(--transition-fast);
+}
+
+.nav-toggle .bar:nth-child(1) {
+  top: 14px;
+}
+
+.nav-toggle .bar:nth-child(2) {
+  top: 21px;
+}
+
+.nav-toggle .bar:nth-child(3) {
+  top: 28px;
+}
+
+.nav-toggle.active .bar:nth-child(1) {
+  top: 21px;
+  width: 24px;
+  transform-origin: 62% 50%;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.nav-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-50%) scaleX(0);
+}
+
+.nav-toggle.active .bar:nth-child(3) {
+  top: 21px;
+  width: 24px;
+  transform-origin: 62% 50%;
+  transform: translateX(-50%) rotate(-45deg);
+}
+
 .nav-link {
   font-weight: 400;
   font-size: var(--font-size-lg);
@@ -597,6 +662,8 @@ section {
   grid-auto-columns: minmax(170px, 1fr);
   gap: 1.1rem;
   overflow-x: auto;
+  scroll-snap-type: x proximity;
+  scroll-padding-inline: 0.45rem;
   scrollbar-width: none;
   -ms-overflow-style: none;
   padding-bottom: 0.2rem;
@@ -609,6 +676,7 @@ section {
 .quest-node {
   position: relative;
   appearance: none;
+  scroll-snap-align: center;
   border: 1px solid #cfcfcf;
   border-radius: 12px;
   background: #f2f2f2;
@@ -1285,6 +1353,10 @@ section {
     max-width: 100%;
   }
 
+  .nav-container {
+    justify-content: flex-end;
+  }
+
   .about {
     padding: 1.8rem 0 2.1rem;
   }
@@ -1334,18 +1406,6 @@ section {
 
   .nav-toggle {
     display: flex;
-  }
-
-  .nav-toggle.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .nav-toggle.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  .nav-toggle.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
   }
 
   .hero {
@@ -1409,6 +1469,7 @@ section {
   .quest-track {
     grid-auto-columns: minmax(150px, 1fr);
     gap: 0.8rem;
+    scroll-padding-inline: 0.25rem;
   }
 
   .quest-node {
@@ -1504,6 +1565,7 @@ section {
   .quest-track {
     grid-auto-columns: minmax(128px, 1fr);
     gap: 0.65rem;
+    scroll-padding-inline: 0;
   }
 
   .quest-node:not(:last-child)::after {

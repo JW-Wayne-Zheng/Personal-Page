@@ -51,11 +51,17 @@
           <a href="#projects" class="nav-link">Projects</a>
           <a href="#contact" class="nav-link">Contact</a>
         </div>
-        <div class="nav-toggle" id="nav-toggle">
+        <button
+          type="button"
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
-        </div>
+        </button>
       </div>
     </nav>
 
@@ -528,49 +534,6 @@
           <div class="project-card">
             <div class="project-image">
               <img
-                src="assets/img/portfolio/minimalist-resume-builder.webp"
-                alt="Resume Builder"
-              />
-              <div class="project-overlay">
-                <div class="project-links">
-                  <a
-                    href="https://minimalist-resume-builder-1ad73fbf31e4.herokuapp.com/"
-                    target="_blank"
-                    class="project-link"
-                  >
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                    >
-                      <path
-                        d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="project-content">
-              <h3>Minimalist Resume Builder</h3>
-              <p>
-                Web application for creating professional resumes with intuitive
-                form interface, real-time preview, and PDF generation. Built
-                with React and TailwindCSS.
-              </p>
-              <div class="project-tags">
-                <span class="tag">React</span>
-                <span class="tag">TailwindCSS</span>
-                <span class="tag">PDF Generation</span>
-                <span class="tag">Web App</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-image">
-              <img
                 src="assets/img/portfolio/portfolio-3.png"
                 alt="Graffiti AR App"
               />
@@ -696,6 +659,6 @@
     </section>
 
     <!-- Custom JavaScript -->
-    <script src="js/main.js"></script>
+    <script type="module" src="js/main.js"></script>
   </body>
 </html>
