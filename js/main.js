@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScrolling();
     initActiveNavigation();
     initAnimations();
+    initExperienceCarousel();
 });
 
 // ===== MOBILE NAVIGATION =====
@@ -122,7 +123,7 @@ function initAnimations() {
     const animateElements = document.querySelectorAll(`
         .info-card,
         .skill-category,
-        .timeline-item,
+        .experience-card,
         .project-card,
         .contact-item
     `);
@@ -215,6 +216,137 @@ function initSkillTags() {
             this.style.transform = 'translateY(0)';
             this.style.boxShadow = 'none';
         });
+    });
+}
+
+// ===== EXPERIENCE CAROUSEL =====
+function initExperienceCarousel() {
+    const carousels = document.querySelectorAll('[data-experience-carousel]');
+
+    carousels.forEach(carousel => {
+        const track = carousel.querySelector('.experience-track');
+        const cards = Array.from(carousel.querySelectorAll('.experience-card'));
+        const prevButton = carousel.querySelector('.experience-nav.prev');
+        const nextButton = carousel.querySelector('.experience-nav.next');
+        const dotsContainer = carousel.querySelector('.experience-dots');
+        const questNodes = Array.from(carousel.querySelectorAll('[data-experience-jump]'));
+
+        if (!track || cards.length === 0 || !dotsContainer) {
+            return;
+        }
+
+        let activeIndex = 0;
+        let scrollTimer;
+
+        cards.forEach((_, index) => {
+            const dot = document.createElement('button');
+            dot.type = 'button';
+            dot.className = 'experience-dot';
+            dot.setAttribute('aria-label', `Go to experience ${index + 1}`);
+            dot.addEventListener('click', function() {
+                goToCard(index);
+            });
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = Array.from(dotsContainer.querySelectorAll('.experience-dot'));
+
+        function updateUiState() {
+            if (prevButton) {
+                prevButton.disabled = activeIndex === 0;
+            }
+
+            if (nextButton) {
+                nextButton.disabled = activeIndex === cards.length - 1;
+            }
+
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === activeIndex);
+            });
+
+            questNodes.forEach(node => {
+                const nodeIndex = Number(node.dataset.experienceJump);
+                const isFocused = nodeIndex === activeIndex;
+                node.classList.toggle('is-focused', isFocused);
+                if (isFocused) {
+                    node.setAttribute('aria-current', 'true');
+                } else {
+                    node.removeAttribute('aria-current');
+                }
+            });
+        }
+
+        function goToCard(index, behavior = 'smooth') {
+            activeIndex = Math.max(0, Math.min(index, cards.length - 1));
+            track.scrollTo({
+                left: cards[activeIndex].offsetLeft,
+                behavior
+            });
+            updateUiState();
+        }
+
+        function syncFromScrollPosition() {
+            const currentLeft = track.scrollLeft;
+            let closestIndex = 0;
+            let smallestDistance = Number.POSITIVE_INFINITY;
+
+            cards.forEach((card, index) => {
+                const distance = Math.abs(card.offsetLeft - currentLeft);
+                if (distance < smallestDistance) {
+                    smallestDistance = distance;
+                    closestIndex = index;
+                }
+            });
+
+            if (closestIndex !== activeIndex) {
+                activeIndex = closestIndex;
+                updateUiState();
+            }
+        }
+
+        if (prevButton) {
+            prevButton.addEventListener('click', function() {
+                goToCard(activeIndex - 1);
+            });
+        }
+
+        if (nextButton) {
+            nextButton.addEventListener('click', function() {
+                goToCard(activeIndex + 1);
+            });
+        }
+
+        track.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                goToCard(activeIndex + 1);
+            }
+
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                goToCard(activeIndex - 1);
+            }
+        });
+
+        track.addEventListener('scroll', function() {
+            clearTimeout(scrollTimer);
+            scrollTimer = setTimeout(syncFromScrollPosition, 80);
+        }, { passive: true });
+
+        questNodes.forEach(node => {
+            node.addEventListener('click', function() {
+                const targetIndex = Number(node.dataset.experienceJump);
+                if (!Number.isNaN(targetIndex)) {
+                    goToCard(targetIndex);
+                }
+            });
+        });
+
+        window.addEventListener('resize', debounce(function() {
+            goToCard(activeIndex, 'auto');
+        }, 120));
+
+        updateUiState();
     });
 }
 

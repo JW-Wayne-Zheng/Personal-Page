@@ -63,11 +63,10 @@
     <section id="home" class="hero">
       <div class="container">
         <div class="hero-content">
-          <h1 class="hero-title">
-            Hi, I'm <span class="highlight">Jianwei "Wayne" Zheng</span>
-          </h1>
+          <p class="hero-mark">WZ</p>
+          <h1 class="hero-title">Hi, <br/> I am Wayne</h1>
           <p class="hero-subtitle">
-            A coder who likes to build things out of random curiosity.
+            &gt; I work in tech. I build things. I’m a team player, but I can also work independently _
           </p>
           <div class="hero-cta">
             <a href="#projects" class="btn btn-primary">View My Work</a>
@@ -131,13 +130,13 @@
     <section id="about" class="about">
       <div class="container">
         <div class="section-header">
+          <p class="about-path">Page / About</p>
           <h2 class="section-title">About Me</h2>
         </div>
 
         <div class="about-content">
           <div class="about-info">
             <div class="info-card">
-              <h3>Background</h3>
               <p>
                 I'm a coder. I like to build different things. Really mean it -
                 full stack web apps, mobile apps, machine learning model
@@ -146,16 +145,15 @@
             </div>
 
             <div class="info-card">
-              <h3>Education & Location</h3>
-              <ul>
+              <h3>Background</h3>
+              <ul class="about-properties">
                 <li>
                   <strong>Degree:</strong> B.S. Computer Science & Data Science
                 </li>
-                <li><strong>Location:</strong> SF Bay Area, NYC, or Remote</li>
                 <li>
                   <strong>Status:</strong>
                   <span class="status-available"
-                    >Open to new opportunities</span
+                    >Grinding</span
                   >
                 </li>
               </ul>
@@ -163,7 +161,7 @@
           </div>
 
           <div class="skills-section">
-            <h3>Technology Stack</h3>
+            <h3>Tech Stack</h3>
             <div class="skills-grid">
               <div class="skill-category">
                 <h4>Languages</h4>
@@ -221,19 +219,135 @@
           <p class="section-subtitle">My professioal journey so far</p>
         </div>
 
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
+        <div class="experience-carousel" data-experience-carousel>
+          <div class="quest-map" aria-label="Experience quest map">
+            <div class="quest-track">
+              <button
+                type="button"
+                class="quest-node is-current"
+                data-experience-jump="0"
+                aria-label="Jump to TasteMates Lab experience"
+              >
+                <span class="quest-name">TasteMates Lab</span>
+                <span class="quest-state">Current Quest</span>
+              </button>
+              <button
+                type="button"
+                class="quest-node is-current"
+                data-experience-jump="1"
+                aria-label="Jump to Salesforce experience"
+              >
+                <span class="quest-name">Salesforce</span>
+                <span class="quest-state">Current Quest</span>
+              </button>
+              <button
+                type="button"
+                class="quest-node is-complete"
+                data-experience-jump="2"
+                aria-label="Jump to SAP experience"
+              >
+                <span class="quest-name">SAP</span>
+                <span class="quest-state">Completed</span>
+              </button>
+              <button
+                type="button"
+                class="quest-node is-complete"
+                data-experience-jump="3"
+                aria-label="Jump to Penn Mutual experience"
+              >
+                <span class="quest-name">Penn Mutual</span>
+                <span class="quest-state">Completed</span>
+              </button>
+              <button
+                type="button"
+                class="quest-node is-complete"
+                data-experience-jump="4"
+                aria-label="Jump to Temple University CCMM experience"
+              >
+                <span class="quest-name">Temple CCMM</span>
+                <span class="quest-state">Completed</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="experience-controls">
+            <button
+              class="experience-nav prev"
+              type="button"
+              aria-label="Previous experience"
+            >
+              ←
+            </button>
+            <button
+              class="experience-nav next"
+              type="button"
+              aria-label="Next experience"
+            >
+              →
+            </button>
+          </div>
+
+          <div class="experience-track" tabindex="0" aria-label="Swipe experiences">
+            <article class="experience-card">
+              <div class="experience-header">
+                <h3>Founder & Software Engineer</h3>
+                <div class="experience-meta">
+                  <span class="company">TasteMates Lab LLC</span>
+                  <span class="period">Current</span>
+                  <span class="location">Remote</span>
+                </div>
+              </div>
+              <ul class="experience-details">
+                <li>
+                  Building and shipping TasteMates applications
+                </li>
+                <li>
+                  Leading product, engineering, and iteration end-to-end from
+                  concept to release
+                </li>
+                <li>
+                  <a href="https://tastematesapp.com/" target="_blank"
+                    >tastematesapp.com</a
+                  >
+                </li>
+              </ul>
+            </article>
+
+            <article class="experience-card">
+              <div class="experience-header">
                 <h3>Software Developer</h3>
-                <div class="timeline-meta">
+                <div class="experience-meta">
+                  <span class="company">Salesforce</span>
+                  <span class="period">August 2025 - Present</span>
+                  <span class="location">SF Bay Area</span>
+                </div>
+              </div>
+              <ul class="experience-details">
+                <li>
+                  Building Relationship Research Agent to surface actionable
+                  business insights from diverse data sources
+                </li>
+                <li>
+                  Designed research workflows to turn scattered signals into
+                  clear next actions
+                </li>
+                <li>
+                  Partnering across teams to ship insight-driven product
+                  experiences fast
+                </li>
+              </ul>
+            </article>
+
+            <article class="experience-card">
+              <div class="experience-header">
+                <h3>Software Developer</h3>
+                <div class="experience-meta">
                   <span class="company">SAP</span>
                   <span class="period">January 2023 - July 2025</span>
                   <span class="location">Palo Alto, CA</span>
                 </div>
               </div>
-              <ul class="timeline-details">
+              <ul class="experience-details">
                 <li>
                   Created multi agents systems for deep research workflow,
                   documents and slides generation
@@ -245,45 +359,41 @@
                 <li>Enhanced semantic search with ElasticSearch</li>
                 <li>Mentored interns & cross-functional collaboration</li>
               </ul>
-            </div>
-          </div>
+            </article>
 
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
+            <article class="experience-card">
+              <div class="experience-header">
                 <h3>Software Engineering Intern</h3>
-                <div class="timeline-meta">
+                <div class="experience-meta">
                   <span class="company">Penn Mutual</span>
                   <span class="period">May 2022 - October 2022</span>
                   <span class="location">Philadelphia, PA</span>
                 </div>
               </div>
-              <ul class="timeline-details">
+              <ul class="experience-details">
                 <li>Maintained internal insurance web applications</li>
                 <li>Built production apps with Spring & jQuery</li>
                 <li>Optimized database operations with MyBatis</li>
               </ul>
-            </div>
-          </div>
+            </article>
 
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
+            <article class="experience-card">
+              <div class="experience-header">
                 <h3>Undergraduate Researcher</h3>
-                <div class="timeline-meta">
+                <div class="experience-meta">
                   <span class="company">Temple University CCMM</span>
                   <span class="period">January 2022 - May 2022</span>
                   <span class="location">Philadelphia, PA</span>
                 </div>
               </div>
-              <ul class="timeline-details">
+              <ul class="experience-details">
                 <li>Enhanced VR accessibility with Unity XR framework</li>
                 <li>Integrated multiple VR vendor platforms</li>
               </ul>
-            </div>
+            </article>
           </div>
+
+          <div class="experience-dots"></div>
         </div>
       </div>
     </section>
