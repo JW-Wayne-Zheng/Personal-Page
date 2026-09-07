@@ -1,4 +1,4 @@
-import { initAnalytics } from './analytics.js';
+import { initAnalytics } from './analytics.js?v=2';
 
 // The page uses native anchor navigation and stays readable without JavaScript.
 initAnalytics();
