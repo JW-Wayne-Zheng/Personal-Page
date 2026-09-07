@@ -30,40 +30,15 @@
     <!-- Favicon -->
     <link href="assets/img/favicon.png" rel="icon" />
 
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
-
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css?v=10" />
   </head>
 
   <body>
     <!-- Navigation -->
-    <nav class="nav">
-      <div class="nav-container">
-        <div class="nav-menu" id="nav-menu">
-          <a href="index.html#home" class="nav-link">Home</a>
-          <a href="index.html#about" class="nav-link">About</a>
-          <a href="index.html#experience" class="nav-link">Experience</a>
-          <a href="index.html#projects" class="nav-link">Projects</a>
-          <a href="index.html#contact" class="nav-link">Contact</a>
-        </div>
-        <button
-          type="button"
-          class="nav-toggle"
-          id="nav-toggle"
-          aria-label="Toggle navigation menu"
-          aria-expanded="false"
-        >
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </button>
-      </div>
-    </nav>
+    <nav class="nav" aria-label="Main navigation"><div class="nav-container">
+      <a class="nav-brand" href="index.html#home" aria-label="Wayne Zheng home">wz<span>.</span></a>
+    </div></nav>
 
     <!-- Project Details Section -->
     <section class="project-details">
@@ -137,7 +112,7 @@
                 <div class="project-links">
                   <a
                     href="https://github.com/JW-Wayne-Zheng/FlaskGANDemo"
-                    target="_blank"
+                    target="_blank" rel="noopener noreferrer"
                     class="project-link-btn"
                   >
                     <svg
@@ -154,7 +129,7 @@
                   </a>
                   <a
                     href="https://flaskgandemo-796743412223.us-east1.run.app"
-                    target="_blank"
+                    target="_blank" rel="noopener noreferrer"
                     class="project-link-btn"
                   >
                     <svg
@@ -200,6 +175,6 @@
     </section>
 
     <!-- Custom JavaScript -->
-    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/main.js?v=7"></script>
   </body>
 </html>
